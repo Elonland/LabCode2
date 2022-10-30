@@ -1,4 +1,4 @@
-public class Test 
+public class Main
 {
     public static void main(String args[])
     {
@@ -17,11 +17,11 @@ public class Test
         
         
 
-        WierszTrojkataPascala Object;
+        PascalTriangleRow Object;
         try
         {
             final int k = Input[0];
-            Object = new WierszTrojkataPascala(k);//Generates the row
+            Object = new PascalTriangleRow(k);//Generates the row
         }
         catch (final MyException f)
         {
@@ -41,7 +41,7 @@ public class Test
                 else
                 {
                 	final int m = Input[i];
-                	System.out.println(m + " - " + Object.wspolczynnik(m));
+                	System.out.println(m + " - " + Object.quotient(m));
                 }
                         
             }

@@ -1,4 +1,4 @@
-public class WierzTrojkataPascalaLib 
+public class PascalTriangleGen
 {
     long tab[];
     int generateTab(int n) throws MyException 
@@ -15,7 +15,7 @@ public class WierzTrojkataPascalaLib
 
         for(int i = 0; i < div; i++)// The left part of the Pascal triangle.
         {
-            tab[i] = NewtonRek(n - 1, i);
+            tab[i] = NewtonRec(n - 1, i);
         }
 
         int count;
@@ -52,13 +52,13 @@ public class WierzTrojkataPascalaLib
     		return 1;
     	return help/help2; 
     }*/
-    long NewtonRek(int n, int k)
+    long NewtonRec(int n, int k)
     {
         if(k == 0)
             return 1;
         else
         {
-            	return (NewtonRek(n - 1, k - 1)*n)/k;//Bez sensu od nowa generuje... jak obliczyłeś 20,2 to po co w 20,3 liczyc od nowa
+            	return (NewtonRec(n - 1, k - 1)*n)/k;//Bez sensu od nowa generuje... jak obliczyłeś 20,2 to po co w 20,3 liczyc od nowa
         }
 
     }
